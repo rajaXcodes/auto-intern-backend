@@ -50,7 +50,7 @@ async function fillFormFields(page, answers) {
 
         try {
             const textareas = document.querySelectorAll('textarea.custom-question-answer');
-            console.log(`Found ${textareas.length} custom question textareas`);
+            // console.log(`Found ${textareas.length} custom question textareas`);
 
             textareas.forEach((textarea, index) => {
                 if (index < answers.length && answers[index]) {

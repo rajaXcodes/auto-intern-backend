@@ -14,12 +14,14 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
 // Application route
 app.post('/apply', async (req, res) => {
-    console.log('Received request with body type:', typeof req.body);
+    // console.log('Received request with body type:', typeof req.body);
     const data = req.body;
 
 
     try {
-        const result = await main(data.email, data.password, data.role, data.letter);
+
+        const result = await main(data.email,data.password , data.role, data.letter);
+        // const result = await main("konig.9122005@gmail.com","rajaraja" ,"Web Development", "I am a full stack developer with 3 years of experience");
         res.status(200).json({
             message: 'Application filled successfully!',
             result: result || {}
