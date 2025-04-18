@@ -21,7 +21,6 @@ app.post('/apply', async (req, res) => {
     try {
 
         const result = await main(data.email,data.password , data.role, data.letter);
-        // const result = await main("konig.9122005@gmail.com","rajaraja" ,"Web Development", "I am a full stack developer with 3 years of experience");
         res.status(200).json({
             message: 'Application filled successfully!',
             result: result || {}
